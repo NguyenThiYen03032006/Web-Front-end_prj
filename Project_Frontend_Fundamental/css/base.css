@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 52px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.check-true {
+    
+    border:2px solid rgb(10, 228, 10) !important;
+}
+.check-false{
+    border:2px solid rgba(241, 40, 73, 1) !important;
+
+} 
+.navbar{
+    background-color: rgba(33, 37, 41, 1);
+    width: 100%vw;
+    height: 56px;
+    padding: 8px 300px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-right{
+    font-size: 13px;
+    gap: 20px;
+    display: flex;
+}
+.footer{
+    background-color: rgba(33, 37, 41, 1);
+    width: 100%vw;
+    height: 56px;
+    padding: 8px 300px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    padding:8px 15px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0,0, 0);
+}
+/* nut sua */
+.btn-fix{
+    background-color: rgba(255, 193, 7, 1);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+.btn-fix:hover{
+    background-color: rgb(217, 165, 7);
+}
+.btn-fix:focus{
+    background-color: rgb(154, 117, 5);
+}
+/* nut xoa */
+.btn-delete{
+    background-color: rgba(220, 53, 69, 1);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.btn-delete:hover{
+    background-color: rgb(183, 29, 45);
+    color: rgb(204, 202, 202);
+}
+.btn-delete:focus{
+    background-color: rgb(110, 14, 24);
+    color: rgb(155, 154, 154);
+}
+/* nut huy */
+.btn-cancel{
+    background-color: rgba(108, 117, 125, 1);
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+.btn-cancel:hover{
+    background-color: rgba(86, 93, 99,1);
+}
+.btn-cancel:focus{
+    background-color: rgba(45, 49, 53,1);
+}
+/* nut luu */
+.btn-save{
+    background-color: rgba(13, 110, 253, 1);
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: white;border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+.btn-save:hover{
+    background-color: rgb(13, 97, 221);
+}
+.btn-save:focus{
+    background-color: rgb(6, 52, 121);
+}
+/* nen them, sua, xoa */
+.fix-container, .delete-container, .add-container{
+    position: absolute;
+    width: 1440px;
+    height: 840px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    justify-content: center;
+}
+.delete{
+    width: 450px;
+    height: 230px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+.delete-body{
+    height: 85px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.x{
+    color:rgba(129, 129, 129, 1);
+}
+.fix-container{
+    display:none; 
+    /* display: flex; */
+}
+.delete-container{
+    display:none; 
+    /* display: flex; */
+}
+.add-container{
+    display:none;  
+    /* display: flex; */
+}
+.fix-add-navbar, .delete-navbar, .add-people-navbar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(222, 226, 230, 1);
+    padding: 15px 15px;
+    font-size: 23px;
+}
+.fix-add-footer, .delete-footer, .add-people-footer{
+    display: flex;
+    gap: 15px;
+    height: 75px;
+    justify-content: end;
+    align-items: end;
+    padding: 5px 20px;
+    border-top: 1px solid rgba(222, 226, 230, 1);
+}
+select{
+    appearance: none;         /* Loại bỏ hiệu ứng mặc định của select */
+
+}
+#logout{
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+#logout:hover{
+    color:rgb(193, 190, 190)
+}
+#logout:focus{
+    color:rgb(111, 110, 110)
+}

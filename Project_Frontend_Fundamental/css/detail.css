@@ -1,0 +1,219 @@
+.detail-body{
+    width:100vw;
+    height:728px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 963px;
+    height:673px;
+}
+.head-container{
+    display: flex;
+}
+.head-left{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+h3{
+    font-size: 24px;
+}
+.head-left > button{
+    border-radius: 6px;
+    width: 155px;
+    border: 1px solid rgba(0,0,0,0);
+    background-color: rgba(13, 110, 253, 1);
+    color:white;
+    padding: 8px 20px;
+    font-size: 13px;
+    
+}
+.head-left-text{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.head-right{
+    width: 363px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.head-right-top{
+    display: flex;
+    justify-content: space-between;
+}
+.list-employees{
+    background-color: rgb(151, 158, 158);
+    height: 80px;
+}
+.head-right-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.select{
+    width: 130px;
+    padding: 8px 20px;
+    font-size: 13px;
+     
+    border: 1px solid rgba(222, 226, 230, 1);
+}
+.input-text{
+    width:200px;
+    padding: 8px 20px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid rgba(222, 226, 230, 1);
+}
+.body-container{
+    height: 490px;
+    margin-top: 20px;
+    padding: 20px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+.body-container > h3{
+    font-size: 19px;
+}
+table, td, th{
+    border: 1px solid rgba(222, 226, 230, 1);
+    padding: 10px 10px;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+thead > tr{
+    background-color: rgba(248, 249, 250, 1);
+}
+tbody{
+    text-align: center;
+}
+.task-list{
+    text-align: left;
+}
+.priority, .timeLine{
+    border-radius: 6px;
+    color: white;
+    border: 1px solid rgba(0,0,0,0);
+    padding: 3px 5px;
+    font-size: 10px;
+}
+.low{
+    background-color: rgba(13, 202, 240, 1);
+    
+}
+.medium, .risky{
+    background-color:rgba(255, 165, 0, 1);
+}
+.high, .overdue{
+    background-color: rgba(220, 53, 69, 1);
+}
+.on-time{
+    background-color:rgba(25, 135, 84, 1);
+}
+.date{
+    color: rgba(13, 110, 253, 1);
+}
+
+.btn{
+    width: 40px;
+    height: 30px;
+    padding: 0 0px;
+}
+.fix-add{
+    width: 480px;
+    height: 780px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fix-add-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 647px;
+    padding:8px 16px;
+
+}
+.fix-add-body-child{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.fix-add-body-child > p{
+    font-size: 16px;
+}
+.fix-add-body-child .child{
+    height: 45px;
+    background-color: white;
+    border: 1px solid rgba(208, 213, 221, 1);
+    border-radius: 8px;
+    padding-left: 8px;
+    
+}
+.fa-angle-down{
+    position: absolute;
+    right: 13px;
+    bottom: 14.5px;
+}
+.add-people{
+    width: 480px;
+    height: 345px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.add-people-body{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 10px 15px;
+    height: 210px;
+    
+}
+.add-people-body> label{
+    margin-top: 10px;
+}
+.add-people-body > input{
+    height: 45px;
+    border: 1px solid rgba(208, 213, 221, 1);
+    border-radius: 8px;
+    margin-bottom:10px;
+}
+#confirm-delete-btn{
+    padding: 8px 15px;
+    width:60px;
+    height:36.5px;
+}
+.employee{
+    width:150px;
+    height:48px;
+    display: flex;
+}
+.img{
+    width:40px;
+    height:40px;
+    /* border-radius: 50%; */
+    background-color:rgba(13, 110, 253, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nameEmployee{
+    color:white;
+    font-size: 15px;
+}

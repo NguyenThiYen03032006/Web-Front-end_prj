@@ -1,0 +1,72 @@
+
+#form-signup{
+    border: 1px solid rgba(228, 228, 231, 1);
+    width: 533px;
+    height: 566px;
+    margin: auto;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    gap:30px; 
+    padding:20px 35px; 
+    text-align: center;
+    box-shadow: 0 0 8px rgba(38, 38, 38, 0.2);
+    position: relative;
+}
+.input-signup{
+    height:65px;
+    border-radius: 9px;
+    border: 1px solid rgba(228, 228, 231, 1);
+    padding:16px;
+    text-align: center;
+    font-size: 16px;
+    
+}
+#input-signup-submit{
+    background-color: rgba(13, 110, 253, 1);
+    color: aliceblue;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+#input-signup-submit:hover{
+    background-color: rgb(11, 99, 229);
+}
+#input-signup-submit:focus{
+    background-color: rgb(10, 79, 184);
+}
+input::placeholder{
+    color:rgb(87, 87, 87);
+}
+.error{
+    position: absolute;
+    color: rgba(241, 40, 73, 1);
+    font-size: 13px;
+}
+#errorName{
+    top: 88px;
+    
+}
+#errorEmail{
+    top: 185px;
+    
+}
+#errorPassword{
+    top: 280px;
+    
+}
+#errorConfirmPassword{
+    top: 375px;
+    
+}
+#error{
+    top: 400px;
+    left: 154px;
+}
+p{
+    font-size: 14px;
+    color: rgb(143, 143, 143);
+}
+a{
+    color:rgba(13, 110, 253, 1);
+}

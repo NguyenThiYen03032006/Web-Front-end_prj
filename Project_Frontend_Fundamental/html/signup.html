@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+    href="https://learn.rikkeiacademy.com/favicon.ico.png" 
+    type="image/x-icon">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+    <h1>Đăng ký</h1>
+    <form id="form-signup">
+        <input  class="input-signup" type="text" id="input-signup-name" placeholder="Họ và tên">
+        <span id="errorName" class="error"></span>
+        <input class="input-signup " type="email" id="input-signup-email" placeholder="Địa chỉ emal">
+        <span id="errorEmail" class="error"></span>
+        <input class="input-signup " type="password" id="input-signup-pasword" placeholder="Mật khẩu">
+        <span id="errorPassword" class="error"></span>
+        <input class="input-signup " type="password" id="input-signup-confirmPassword" placeholder="Xác nhận mật khẩu">
+        <span id="errorConfirmPassword" class="error"></span>
+        <span class="error" id="error" ></span>
+        <button class="input-signup " id="input-signup-submit">Đăng ký</button>
+        <p>Đã có tài khoản? <b><a href="../html/signin.html">Đăng nhập </a></b></p>
+    </form>
+    <script src="../js/signup.js"></script>
+</body>
+</html>
