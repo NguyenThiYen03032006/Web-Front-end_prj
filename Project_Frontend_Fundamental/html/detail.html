@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+    href="https://learn.rikkeiacademy.com/favicon.ico.png" 
+    type="image/x-icon">
+    <title>Chi Tiết Dự Án</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+    <div class="detail-navbar navbar">
+        <p class="navbar-left"> Quản Lý Dự Án</p>
+        <div class="navbar-right">
+            <span>Dự Án</span>
+            <span>Nhiệm Vụ Của Tôi</span>
+            <span id="logout" onclick="logout()">Đăng Xuất</span>
+        </div>
+    </div>
+    <div class="detail-body ">
+        <div class="container">
+            <div class="head-container">
+                <div class="head-left">
+                    <h3 id="name-task">Xây dựng website thương mai điện tử</h3>
+                    <p class="head-left-text" id="taskDescribe">Dự án nhằm phát triển một nền tảng thương mại điện tử với các tính năng như giỏ hàng, thanh toán và quản lý sản phẩm.</p>
+                    <button onclick="addTaskContainer()">+ Thêm nhiệm vụ</button>
+                </div>
+                <div class="head-right">
+                    <div class="head-right-top">
+                        <h3>Thành viên</h3>
+                        <button>+ Thêm thành viên</button>
+                    </div>
+                    <div class="list-employees">
+                        <!-- <div class="employee">
+                            <div class="img"><span class="nameEmployee">AN</span></div>
+                            <div>
+                                <span>An Nguyễn</span>
+                                <span>Project owner</span>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="head-right-bottom">
+                        <select class="select">
+                            <option value="choose">Sắp xếp theo</option>
+                            <option value="choose">Ưu tiên</option>
+                            <option value="choose">Tiến độ</option>
+                        </select>
+                        <input class="input-text" type="text" placeholder="Tìm kiếm nhiệm vụ">
+                    </div>
+                </div>
+            </div>
+            <div class="body-container">
+                <h3>Danh Sách Nhiệm Vụ</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 223px;">Tên Nhiệm Vụ</th>
+                            <th style="width: 160px;">Người Phụ Trách</th>
+                            <th style="width: 85px;">Ưu Tiên</th>
+                            <th style="width: 132px;">Ngày Bắt Đầu</th>
+                            <th style="width: 132px;">Hạn Chót</th>
+                            <th style="width: 94px;">Tiến Độ</th>
+                            <th colspan="2">Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <div class="task-to-do-list">
+                            <tr class="to-do task-list">
+                                <th colspan="8">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                    <b>To do</b>
+                                </th>
+                            </tr>
+                            <tbody id="to-do-body">
+                                <!-- <tr>
+                                    <td>Soạn thảo đề cương dự án</td>
+                                    <td>An Nguyễn</td>
+                                    <td><span class="priority low">Thấp</span></td>
+                                    <td class="date">02-24</td>
+                                    <td class="date">02-27</td>
+                                    <td><span class="on-time timeLine">Đúng tiến độ</span></td>
+                                    <td><button class="btn btn-fix">Sua</button></td>
+                                    <td><button class="btn btn-delete">Xoa</button></td>
+                                </tr> -->
+                                <!-- <tr>
+                                    <td>Soạn thảo đề cương dự án</td>
+                                    <td>An Nguyễn</td>
+                                    <td><span class="priority medium">Trung bình</span></td>
+                                    <td class="date">02-24</td>
+                                    <td class="date">02-27</td>
+                                    <td><span class="risky timeLine">Có rủi ro</span></td>
+                                    <td><button class="btn btn-fix">Sua</button></td>
+                                    <td><button class="btn btn-delete">Xoa</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Soạn thảo đề cương dự án</td>
+                                    <td>An Nguyễn</td>
+                                    <td><span class="priority high">Cao</span></td>
+                                    <td class="date">02-24</td>
+                                    <td class="date">02-27</td>
+                                    <td><span class="overdue timeLine">Trễ hạn</span></td>
+                                    <td><button class="btn btn-fix">Sua</button></td>
+                                    <td><button class="btn btn-delete">Xoa</button></td>
+                                </tr> -->
+                            </tbody>
+                            
+                        </div>
+                        <div>
+                            <tr class="in-progress task-list">
+                                <th colspan="8">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                    <b>In progress</b>
+                                </th>
+                            </tr>
+                            <tbody id="in-progress-body">
+                            <tr>
+                                <td>Lên lịch họp kickoff</td>
+                                <td>An Nguyễn</td>
+                                <td><span class="priority medium">Trung bình</span></td>
+                                <td class="date">02-24</td>
+                                <td class="date">02-27</td>
+                                <td><span class="risky timeLine">Có rủi ro</span></td>
+                                <td><button class="btn btn-fix">Sua</button></td>
+                                <td><button class="btn btn-delete">Xoa</button></td>
+                            </tr>
+                        </tbody>
+                        </div>
+                        <div>
+                            <tr class="pending task-list">
+                                <th colspan="8">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <b>Pending</b>
+                                </th>
+                            </tr>
+                            <tbody id="pending-body">
+
+                            </tbody>
+                        </div>
+                        <div>
+                            <tr class="done task-list">
+                                <th colspan="8">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <b>Done</b>
+                                </th>
+                            </tr>
+                            <tbody id="done-body">
+
+                            </tbody>
+                        </div>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="detail-footer footer">
+        <span >&#169; 2025 Quản Lý Dự Án Nhóm. All rights reserved.</span>
+    </div>
+
+    <!-- giao dien them/ sua nhiem vu -->
+     <div class="fix-container" id="fix-container">
+        <div class="fix-add">
+            <div class="fix-add-navbar">
+                <p id="textFixAdd">Thêm/sửa nhiệm vụ</p>
+                <i class="fa-solid fa-xmark x" onclick="cancel()"></i>
+            </div>
+            <div class="fix-add-body">
+                <div class="fix-add-body-child">
+                    <p>Tên nhiệm vụ</p>
+                    <input class="child" name="add-project child" id="input-add-project">
+                </div>
+                <div class="fix-add-body-child">
+                    <p>Người phụ trách</p> 
+                    <select class="child" id="assignee">
+                        <!-- <option value="">Chọn người phụ trách</option>
+                        <option value="people">An Nguyễn</option>
+                        <option value="people">Yến Nguyễn</option>
+                        <option value="people">Bảo Khánh</option> -->
+                    </select>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="fix-add-body-child">
+                    <p>Trạng thái</p> 
+                    <select class="child" id="status">
+                        <option value="" disabled selected>Chọn trạng thái</option>
+                        <option value="To do">To do</option>
+                        <option value="In progress">In progress</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Done">Done</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="fix-add-body-child">
+                    <p>Ngày bắt đầu</p>
+                    <input class="child" type="date" name="date"  id="start-date" placeholder="mm-dd">
+                </div>
+                <div class="fix-add-body-child">
+                    <p>Hạn cuối</p>
+                    <input class="child" type="date" name="date" id="end-date" placeholder="mm-dd">
+                </div>
+                <div class="fix-add-body-child">
+                    <p>Độ ưu tiên</p> 
+                    <select class="child" id="priority">
+                        <option value="">Chọn độ ưu tiên</option>
+                        <option value="Thấp">Thấp</option>
+                        <option value="Trung bình">Trung bình</option>
+                        <option value="Cao">Cao</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="fix-add-body-child">
+                    <p>Tiến độ</p> 
+                    <select class="child" id="progress">
+                        <option value="">Chọn tiến độ</option>
+                        <option value="Đúng tiến độ">Đúng tiến độ</option>
+                        <option value="có rủi ro">Có rủi ro</option>
+                        <option value="Trễ hạn">Trễ hạn</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                
+            </div>
+            <div class="fix-add-footer">
+                <buttnon class="btn-cancel" onclick="cancel()">Huỷ </buttnon>
+                <buttnon class="btn-save" onclick="addTask()">Lưu </buttnon>
+            </div>
+        </div>
+     </div>
+     <!-- giao dien xoa du an -->
+    <div class="delete-container" id="delete-container">
+        <div class="delete">
+            <div class="delete-navbar">
+                <p>Xác nhận xoá</p>
+                <i class="fa-solid fa-xmark x exit"  onclick="cancel()"></i>
+            </div>
+            <div class="delete-body">
+                <p>Bạn chắc chắn muốn xoá dự án này?</p>
+            </div>
+            <div class="delete-footer">
+                <buttnon class="btn-cancel"  onclick="cancel()">Huỷ </buttnon>
+                <buttnon class="btn-delete btn" id="confirm-delete-btn">Xoá </buttnon>
+            </div>
+        </div>
+    </div>
+
+     <!-- them thanh vien -->
+     <div class="add-container">
+        <div class="add-people">
+            <div class="add-people-navbar">
+                <p>Thêm thành viên</p>
+                <i class="fa-solid fa-xmark x" onclick="cancel()"></i>
+            </div>
+            <div class="add-people-body">
+                <label for="email">Email</label>
+                <input name="add-people-email" type="email" id="input-add-people-email">
+                <label for="role" >Vai trò</label>
+                <input name="role" id="add-people-role" type="text"></input>
+            </div>
+            <div class="add-people-footer">
+                <buttnon class="btn-cancel">Huỷ </buttnon>
+                <buttnon class="btn-save">Lưu </buttnon>
+            </div>
+        </div>
+    </div>
+
+    <!-- giao dien xoa nhiem vu -->
+    <div class="delete-container" id="delete-container">
+        <div class="delete">
+            <div class="delete-navbar">
+                <p>Xác nhận xoá</p>
+                <i class="fa-solid fa-xmark x"></i>
+            </div>
+            <div class="delete-body">
+                <p>Bạn chắc chắn muốn xoá nhiệm vụ này?</p>
+            </div>
+            <div class="delete-footer">
+                <buttnon class="btn-cancel">Huỷ </buttnon>
+                <buttnon class="btn-delete" id="confirm-delete-btn">Xoá </buttnon>
+            </div>
+        </div>
+    </div>
+    <script src="../js/detail.js"></script>
+</body>
+</html>

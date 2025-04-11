@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+    href="https://learn.rikkeiacademy.com/favicon.ico.png" 
+    type="image/x-icon">
+    <title>Quản lý Dự Án</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/team-management.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+
+    <div class="management-navbar navbar">
+        <p class="navbar-left"> Quản Lý Dự Án</p>
+        <div class="navbar-right">
+            <span >Dự Án</span>
+            <span>Nhiệm Vụ Của Tôi</span>
+            <span id="logout" onclick="logout()">Đăng Xuất</span>
+        </div>
+    </div>
+
+
+    <div class="management-body ">
+        <div class="container">
+            <div class="title">
+                <h3>Quản Lý Dự Án Nhóm</h3>
+            </div>
+            <div class="add-search">
+                <button class="add-project" onclick="addTask()">+ Thêm Dự Án</button>
+                <input class="search-project" type="text" placeholder="Tìm kiếm dự án" id="searchProject">
+            </div>
+            <div class="list">
+                <h3>Danh Sách Dự Án</h3>
+                <table class="list-project"> 
+                    <thead>
+                        <tr>
+                            <th class="id-project">ID</th>
+                            <th class="name-project">Tên Dự Án</th>
+                            <th colspan="3">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <!-- <tr>
+                            <td class="id-project">1</td>
+                            <td class="name-project">Xay dung website thuong mai dien tu</td>
+                            <td><button class="btn btn-fix">Sua</button></td>
+                            <td><button class="btn btn-delete">Xoa</button></td>
+                            <td><button class="btn btn-detail">Chi tiet</button></td>
+                        </tr>
+                       -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="page-container">
+            <span class="prev-page" onclick="prevPage()"><i class="fa-solid fa-chevron-left"></i></span>
+            <div class="page" id="page">
+                <!-- <span id="choose-page">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>  -->
+            </div>
+            <span class="next-page" onclick="nextPage()"><i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+    </div>
+
+    <div class="management-footer footer">
+        <span >&#169; 2025 Team management. All rights reserved.</span>
+    </div>
+
+    <!-- giao dien them/ sua du an -->
+    <div class="fix-container" id="fix-container">
+        <div class="fix-add">
+            <div class="fix-add-navbar">
+                <p id="text">Thêm/sửa dự án</p>
+                <i class="fa-solid fa-xmark x exit" onclick="cancel()"></i>
+            </div>
+            <div class="fix-add-body">
+                <label for="add-project">Tên dự án</label>
+                <input name="add-project" id="input-add-project">
+                <span id="errorName" class="error"></span>
+                <lable for="describe-project" >Mô tả dự án</lable>
+                <textarea name="describe-project" id="text-describe-project"></textarea>
+                <span id="errorTextarea" class="error"></span>
+            </div>
+            <div class="fix-add-footer">
+                <buttnon class="btn-cancel" onclick="cancel()">Huỷ </buttnon>
+                <buttnon class="btn-save" onclick="checkAdd()">Lưu </buttnon>
+            </div>
+        </div>
+    </div>
+
+    <!-- giao dien xoa du an -->
+    <div class="delete-container" id="delete-container">
+        <div class="delete">
+            <div class="delete-navbar">
+                <p>Xác nhận xoá</p>
+                <i class="fa-solid fa-xmark x exit"  onclick="cancel()"></i>
+            </div>
+            <div class="delete-body">
+                <p>Bạn chắc chắn muốn xoá dự án này?</p>
+            </div>
+            <div class="delete-footer">
+                <buttnon class="btn-cancel"  onclick="cancel()">Huỷ </buttnon>
+                <buttnon class="btn-delete btn" id="confirm-delete-btn">Xoá </buttnon>
+            </div>
+        </div>
+    </div>
+    <script src="../js/team-management.js"></script>
+</body>
+</html>
