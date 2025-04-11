@@ -140,7 +140,7 @@ if (!user.project) {
 
 let fixIndex=-1;
 let currentPage=1;
-let taskPerPage=2;
+let taskPerPage=5;
 let totalPage= Math.ceil(user.project.length / taskPerPage);
 
 // ham render du an
